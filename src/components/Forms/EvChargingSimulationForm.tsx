@@ -13,7 +13,7 @@ function EvChargingSimulationForm({ onSubmit }: FormProps) {
     chargingPowerPerChargePoint: 11
   })
 
-  const handleIncrement = (field: keyof SimulationInput, max?: number) => {
+  const handleIncrement = (field: keyof SimulationInput, max: number) => {
     setFormState(prevState => ({
       ...prevState,
       [field]: max ? Math.min((prevState[field] || 0) + 1, max) : (prevState[field] || 0) + 1,
